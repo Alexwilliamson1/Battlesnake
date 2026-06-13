@@ -2,7 +2,7 @@
 
 ## Description:
 
-This program consists of two parts: a Minimax implementation for Battlesnake and a genetic algorithm for optimizing the heuristic function for the Minimax implementation.  The two parts can be used together, but they run independently. 
+This repository contains two programs: a Minimax implementation for Battlesnake and a genetic algorithm for optimizing the heuristic function for the Minimax implementation.  The two programs can be used together, but they run independently. 
 
 The Minimax algorithm:
 
