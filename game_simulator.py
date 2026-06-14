@@ -2,7 +2,7 @@ import copy
 import random
 import uuid
 import maxn
-import safe_random_bot
+import random_bot
 import beginner_bot
 
 DIRECTIONS = {
@@ -148,7 +148,7 @@ def run_game(genomes, max_turns=500, seed=None, logger=None):
             if (i < 2):
                 move = maxn.find_best_move(move_state, i, genomes[i])
             elif (i == 2):
-                move = safe_random_bot.safe_random_bot(move_state, i)
+                move = random_bot.random_bot(move_state, i)
             elif (i == 3):
                 move = beginner_bot.beginner_bot(move_state, i)
 
