@@ -10,7 +10,7 @@ MOVE_DELTA = {
 }
 
 #The following function randomly chooses a move from a list of moves that lead to free board squares.  If every move either leads this snake off the game board or into an opponent's body, the function randomly chooses a move from "DIRECTIONS."
-def safe_random_bot(state, snake_index):
+def random_bot(state, snake_index):
     board = state["board"]
     snakes = board["snakes"]
     you = snakes[snake_index]
