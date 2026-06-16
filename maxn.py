@@ -8,7 +8,7 @@ import floodfill
 def find_best_move(game_state, snake_index, genome):
     best_move = None
     best_score = float("-inf")
-    depth = 3
+    depth = 2
 
     for move in get_possible_moves(game_state, snake_index):
         new_state = simulate_move(game_state, snake_index, move)
