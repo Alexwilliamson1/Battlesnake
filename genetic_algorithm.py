@@ -20,10 +20,10 @@ def genetic_algorithm():
     for generation in range(GENERATIONS):
         if generation == 0:
             print(f"{generation}/{GENERATIONS} generations have been evolved.")
-        run_tournament(population, generation, total_game_count)
+        total_game_count = run_tournament(population, generation, total_game_count)
         population, elite = evolve(population)
-        if generation > 0:
-                print(f"{generation}/{GENERATIONS} generations have been evolved.")
+        if generation + 1 > 0:
+                print(f"{generation + 1}/{GENERATIONS} generations have been evolved.")
 
 #To simulate games between two Battlesnakes with evolving genomes and two Battlesnakes with simplified genomes:
 def run_tournament(population, generation, total_game_count):        
@@ -65,6 +65,7 @@ def run_tournament(population, generation, total_game_count):
             population[k]["avg_turns"] = population[k]["stats"]["turns"] / population[k]["stats"]["games"]
             
         log_stats(population, generation, game_count, turn_count)
+        return total_game_count
 
 #To create a new population from the best-performing Battlesnakes in the previous population and by randomly selecting and mutating "parent" genomes:
 def evolve(population):
