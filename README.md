@@ -20,7 +20,7 @@ The game simulations are between 4 players: two players have “evolving” geno
 
 ## Requirements:
 
-To run the Battlesnake program, one requires: Python 3 or higher; Flask; “pip” for installing Python packages; an internet connection; and a public URL provider, such as ngrok.  To install Flask, run the command `pip install -r requirements.txt`.
+To run the Battlesnake program, one requires: Python 3 or higher; Flask; “pip” for installing Python packages; an internet connection; and a public URL provider, such as ngrok.  To install Flask, run the command `pip install Flask==2.3.2`.
 
 To run the genetic algorithm, one requires Python 3 or higher.
 
