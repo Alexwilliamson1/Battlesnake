@@ -14,30 +14,30 @@ Once the recursive depth of the algorithm is reached, a heuristic function is ca
 
 The genetic algorithm:
 
-A set of weights for the heuristic function in the MaxN algorithm have been chosen and defined in “main.py.”  Together these weights comprise a “genome” or unique scoring strategy for a Battlesnake, independent of the MaxN tree search.  To further optimize this strategy, a genetic algorithm can be used to find a new set of weights based on the results of game simulations.  
+A set of weights for the heuristic function in the MaxN algorithm have been chosen and defined in `main.py.`  Together these weights comprise a “genome” or unique scoring strategy for a Battlesnake, independent of the MaxN tree search.  To further optimize this strategy, a genetic algorithm can be used to find a new set of weights based on the results of game simulations.  
 
 The game simulations are between 4 players: two players have “evolving” genomes and two players are pre-programmed ‘bots.’  The algorithm begins with a population of Battlesnakes with randomly initialized genomes.  For each generation, a series of games are simulated so that every member of the population competes against every other member.  The Battlesnakes with the best performing genomes are used to create the next population through a process of parent selection and genome mutation.  Statistics about each population are logged and the algorithm runs for the specified number of generations with the goal of finding optimal weights for a single genome.  
 
 ## Requirements:
 
-To run the Battlesnake program, one requires: Python 3 or higher; Flask; “pip” for installing Python packages; an internet connection; and a public URL provider, such as ngrok.  To install Flask, run the command “pip install -r requirements.txt.”
+To run the Battlesnake program, one requires: Python 3 or higher; Flask; “pip” for installing Python packages; an internet connection; and a public URL provider, such as ngrok.  To install Flask, run the command `pip install -r requirements.txt.`
 
 To run the genetic algorithm, one requires Python 3 or higher.
 
 ## To run the Battlesnake program:
 
-First, type “play.battlesnake.com” in a browser and click on the link to the “My Battlesnakes” page.  See the notes below for creating a Battlesnake.  If using ngrok to deploy your server, open a command-line interface, navigate to the directory containing the Battlesnake program’s source files, and run the command “ngrok http 8000.” 
+First, type “play.battlesnake.com” in a browser and click on the link to the “My Battlesnakes” page.  See the notes below for creating a Battlesnake.  If using ngrok to deploy your server, open a command-line interface, navigate to the directory containing the Battlesnake program’s source files, and run the command `ngrok http 8000.`
 
-Open a second command-line interface, navigate to the directory containing the Battlesnake program’s source files, and run the command “python3 main.py.”  On the “My Battlesnakes” page displayed in your browser, click on the Battlesnake you created for this program, confirm that play.battlesnake.com is connected to the this program’s server by clicking the “PING” button, then create a game.
+Open a second command-line interface, navigate to the directory containing the Battlesnake program’s source files, and run the command `python3 main.py.`  On the “My Battlesnakes” page displayed in your browser, click on the Battlesnake you created for this program, confirm that play.battlesnake.com is connected to the this program’s server by clicking the “PING” button, then create a game.
 
 ## To run the genetic algorithm:
 
-Open a command-line interface, navigate to the directory containing “genetic_algorithm.py,” and run the command “python3 genetic_algorithm.py.”  
+Open a command-line interface, navigate to the directory containing `genetic_algorithm.py,` and run the command `python3 genetic_algorithm.py.`  
 
 ## Notes:
 
 The Battlesnake program is intended to be used for playing games on play.battlesnake.com.  Therefore, some setup is required.  First, create a user account on play.battlesnake.com.  Next, create a Battlesnake with a name and server URL.   A server URL is required for sending and receiving data to and from play.battlesnake.com during games.  One can obtain one in a variety of ways, the most common of which is by using a platform that provides application hosting or deployment services.  Some platforms that provide these services for free are: ngrok, Fly.io, Railway, Render, AWS, Google Cloud, and Microsoft Azure.  
 
-The server URL for this Battlesnake program was provided by ngrok.  To use ngrok, create a user account, open a command-line interface, navigate to the directory containing the Battlesnake program’s source files, and run the command “ngrok http” followed by the port on which your Battlesnake server runs.  For this program, the full command is “ngrok http 8000.”  A new window will open displaying information.  Beside the word “forwarding” will be a URL beginning with “https.”  Use this URL to create a Battlesnake.
+The server URL used for testing the Battlesnake program was provided by ngrok.  To use ngrok, create a user account, open a command-line interface, navigate to the directory containing the program’s source files, and run the command `ngrok http` followed by the port on which your Battlesnake server runs.  The port in `server.py` is currently set to 8000, so the full command is `ngrok http 8000.`  A new window will open displaying information.  Beside the word “forwarding” will be a URL beginning with “https.”  Use this URL to create a Battlesnake.
 
 This program was tested on macOS 15.7 using Clang. 
